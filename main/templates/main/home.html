@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        font-weight: bolder;
+        text-align: center;
+        color: #000000; 
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .gallery img {
+        margin: 9px;
+        max-width: calc(50% - 18px);
+        height: auto;
+        border-radius: 10px; 
+        transition: transform 0.3s ease; 
+    }
+    .gallery img:hover {
+        transform: scale(1.05); 
+        cursor: pointer;
+    }
+</style>
+<h1>Welcome to the Club!</h1>
+<div class="gallery">
+    <img src="{% static 'gym_img1.jpg' %}">
+    <img src="{% static 'gym_img2.jpg' %}">
+    <img src="{% static 'gym_img3.jpg' %}">
+    <img src="{% static 'gym_img4.jpg' %}">
+    <img src="{% static 'gym_img5.jpg' %}">
+    <img src="{% static 'gym_img6.jpg' %}">
+</div>
+{% endblock content %}

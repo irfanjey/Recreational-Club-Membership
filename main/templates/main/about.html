@@ -1,0 +1,53 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+
+<section class="py-10 py-md-5 py-xl-8 mt-5">
+    <div class="container">
+      <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+        <div class="col-12 col-lg-6 col-xl-5" style="padding-right: 20px;">
+          <img class="img-fluid rounded" loading="lazy" src="https://www.hussle.com/blog/wp-content/uploads/2020/12/Gym-structure-1080x675.png" alt="">
+        </div>
+        <div class="col-12 col-lg-6 col-xl-7">
+          <div class="row justify-content-xl-center">
+            <div class="col-12 col-xl-11">
+              <h2 class="h1 mb-3">About Us</h2>
+              <p class="lead fs-4 text-secondary mb-3">Recreational Club Membership.</p>
+              <p class="mb-5">Welcome to our club! We are a spirited community of dance enthusiasts who meet weekly to enjoy salsa and other dance styles under the guidance of our passionate amateur coach. Flexible attendance and payment options make it easy for members to join whenever they can, ensuring everyone can partake in the fun. We value commitment and provide gentle reminders for payments and upcoming sessions, maintaining a friendly and responsible environment. Join us to dance, learn, and create lasting friendships!</p>
+              <div class="row gy-4 gy-md-0 gx-xxl-5X">
+                <div class="col-12 col-md-6">
+                  <div class="d-flex">
+                  {% if not user.is_authenticated %}
+                    <div>
+                      <h4 class="mb-3">Discounts</h4>
+                      <p class="text-secondary mb-0">Get up to 10% for one class if you regularly attend!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 ">
+                  <div class="d-flex">
+                    <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                       
+                        <div>
+                            <h3>Join Us</h3>
+                            <a href="{% url 'signup' %}">
+                              <button class="btn btn-primary btn-sm rounded px-5 pt-3 pb-3">Sign Up!</button>
+                            </a>
+
+                        </div>
+                        
+                      </div>
+                    
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock content %}
+
